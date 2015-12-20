@@ -149,7 +149,7 @@ app.get('/text', function(req, res) {
       }
       light_count += 1;
     }
-    return res.send('done');
+    res.end();
 });
 
 app.get('/off', function(req, res) {
