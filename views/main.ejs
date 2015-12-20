@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>1+-1 = 1: Main Page</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href="stylesheets/styles.css" rel="stylesheet">
+    </head>
+    <body>
+
+<div class="container">
+<!-- <h1>1 + - 1 = 1 Guiding System</h1> -->
+
+
+<section>
+  <div class="page-header">
+    <h1 class="text-center"><%= name %></h1>
+    <% for(var i = 0 ; i < tips.length; i++) {%>
+      <div class="alert alert-danger fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>【<%= tips_from[i] %>】</strong> <%= tips[i] %>
+      </div>
+    <% } %>
+
+  </div>
+
+<div class="container">
+<div class="row">
+  <% for(var i = 0 ; i < things.length; i++) {%>
+  <div class="col-lg-4">
+    <div class="well"><h2 class="text-center"><%= things[i] %></h2>
+      <img class="img-responsive center-block" src="./images/<%= things_image[i] %>.jpg" alt="" onclick="turnWhite(this);"></br>
+      <button id="<%= things_image[i] %>" type="button" class="btn btn-warning btn-lg btn-block " onclick="find_<%= things_image[i] %>();">找我</button>
+    </div>
+  </div>
+  <% } %>
+</div>
+</div>
+</section>
+    <!-- script references -->
+    <script>
+    <% for(var i = 0 ; i < things.length; i++) {%>
+      find_<%= things_image[i] %> = function(){
+        console.log('<%= things_image[i] %>');
+        event.preventDefault();
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/find?name=<%= things_image[i] %>', false);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.send(null);
+        if (xhr.status === 200) {
+            console.log('succeed!');
+        }
+        else
+            console.log('XMLHttpRequest failed. Status: ' + xhr.status);
+        };
+    <% } %>
+    turnWhite = function(e) {
+      $(this).css('opacity', '0.6');
+      console.log('jjjj');
+    };
+
+    </script>
+        <script src="javascripts/jquery.js"></script>
+        <script src="javascripts/jquery.easing.min.js"></script>
+        <script src="javascripts/bootstrap.min.js"></script>
+        <script src="javascripts/main.js"></script>
+    </body>
+</html>

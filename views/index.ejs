@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>1+-1 = 1</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href="stylesheets/styles.css" rel="stylesheet">
+    </head>
+    <style type="text/css" media="screen">
+      body {
+        background-color: #2bab6e;
+      }
+      .btn-LOGIN, .btn-LOGIN:visited, .btn-LOGIN:focus {
+        -webkit-border-radius: 25;
+        -moz-border-radius: 25;
+        border-radius: 25px;
+        font-family: Arial;
+        color: #2bab6d;
+        font-size: 20px;
+        background: #a0d3b8;
+        padding: 10px 40px 10px 40px;
+        text-decoration: none;
+        outline:0 !important;
+        width: 350px;
+      }
+
+      .btn-LOGIN:hover {
+        background: #a1e3c0;
+        color: #2bab6d;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      a.sign-in:link {
+        text-decoration:underline;
+        color:#FFFFFF;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      a.sign-in:visited,
+      a.sign-in:hover,
+      a.sign-in:active {
+        color:#FFFFFF;
+      }
+
+      a.change-page:link, a.change-page:visited {
+        text-decoration:none;
+        color:#FFFFFF;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0px 5px 0px 5px;
+      }
+
+      a.change-page:hover {
+        color:#1e774c;
+      }
+      a.change-page:active {
+        color:#0d5d36;
+      }
+      .footer {
+        padding-top: 120px;
+      }
+      .create-account-page {
+        height: 70vh;
+      }
+
+    </style>
+    <body>
+
+<div class="container">
+<!-- <h1>1 + - 1 = 1 Guiding System</h1> -->
+
+
+<section>
+<div class="container">
+<div class="row create-account-page">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+      </br></br></br>
+      <img class="img-responsive center-block" src="./images/index.png" style="height: 350px" alt="" onclick="turnWhite(this);"></br>
+      <button id="login" type="button" class="btn btn-LOGIN center-block" onclick="javascript:location.href='sign-in';sendToServer('create-account', 'text');">Create Account</button>
+      </br></br>
+      <p class="text-center" style="color:white">Already have an account? <a href="sign-in" class="sign-in">Sign In</a></p>
+  </div>
+</div>
+<div class="row footer">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+      <p class="text-center" style="color:white">
+        <a href="/" class="change-page page-choosen">●</a>
+        <a href="sign-in" class="change-page">●</a>
+        <a href="take-photo" class="change-page">●</a>
+        <a href="reminder" class="change-page">●</a>
+        <a href="users" class="change-page">●</a>
+      </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+        <script src="javascripts/jquery.js"></script>
+        <script src="javascripts/jquery.easing.min.js"></script>
+        <script src="javascripts/bootstrap.min.js"></script>
+        <script src="javascripts/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>1+-1 = 1: Reminder</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href="stylesheets/styles.css" rel="stylesheet">
+    </head>
+    <style type="text/css" media="screen">
+      body {
+        background-color: #cacbca;
+      }
+      .btn-LOGIN, .btn-LOGIN:visited, .btn-LOGIN:focus {
+        -webkit-border-radius: 25;
+        -moz-border-radius: 25;
+        border-radius: 25px;
+        font-family: Arial;
+        color: white;
+        font-size: 20px;
+        background: #61b58b;
+        padding: 10px 40px 10px 40px;
+        text-decoration: none;
+        width: 350px;
+        outline:0 !important;
+      }
+
+      .btn-LOGIN:hover {
+        background: #54a97f;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      a.sign-in:link {
+        text-decoration:underline;
+        color:#FFFFFF;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      a.sign-in:visited,
+      a.sign-in:hover,
+      a.sign-in:active {
+        color:#FFFFFF;
+      }
+
+      a.change-page:link, a.change-page:visited {
+        text-decoration:none;
+        color:#FFFFFF;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0px 5px 0px 5px;
+      }
+
+      a.change-page:hover {
+        color:#49ba83;
+      }
+      a.change-page:active {
+        color:#33aa70;
+      }
+      .footer {
+        padding-top: 50px;
+      }
+      .sign-in-button {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        width: 320px;
+        padding: 10px 15px 10px 15px;
+        border: 2px solid #2bab6e;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+        font-family: Arial;
+        color: rgba(255,255,255,1);
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        background: url("/images/login/name.png"), #cbcccb;
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+        -webkit-background-origin: padding-box;
+        background-origin: padding-box;
+        -webkit-background-clip: border-box;
+        background-clip: border-box;
+        -webkit-background-size: contain;
+        background-size: contain;
+        -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        font-size: 20px;
+        outline:0 !important;
+      }
+      .sign-in-button::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+          color: white;
+          /*padding: 0px 0px 0px 15px;*/
+      }
+      .sign-in-button:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+         color: white;
+         opacity: 1;
+         padding: 0px 0px 0px 15px;
+      }
+      .sign-in-button::-moz-placeholder { /* Mozilla Firefox 19+ */
+         color: white;
+         opacity: 1;
+         padding: 0px 0px 0px 15px;
+      }
+      .sign-in-button:-ms-input-placeholder { /* Internet Explorer 10-11 */
+         color: white;
+         padding: 0px 0px 0px 15px;
+      }
+      .sign-in-button2 {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        width: 320px;
+        padding: 10px 15px 10px 15px;
+        border: 2px solid #2bab6e;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+        font-family: Arial;
+        color: rgba(255,255,255,1);
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        background: url("/images/login/psw.png"), #cbcccb;
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+        -webkit-background-origin: padding-box;
+        background-origin: padding-box;
+        -webkit-background-clip: border-box;
+        background-clip: border-box;
+        -webkit-background-size: contain;
+        background-size: contain;
+        -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        font-size: 20px;
+        outline:0 !important;
+      }
+      .sign-in-button2::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+          color: white;
+          /*padding: 0px 0px 0px 15px;*/
+      }
+      .sign-in-button2:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+         color: white;
+         opacity: 1;
+         padding: 0px 0px 0px 15px;
+      }
+      .sign-in-button2::-moz-placeholder { /* Mozilla Firefox 19+ */
+         color: white;
+         opacity: 1;
+         padding: 0px 0px 0px 15px;
+      }
+      .sign-in-button2:-ms-input-placeholder { /* Internet Explorer 10-11 */
+         color: white;
+         padding: 0px 0px 0px 15px;
+      }
+      .footer {
+        padding-top: 120px;
+      }
+      .white-color {
+        color: white;
+      }
+
+    </style>
+    <body>
+
+<div class="container">
+<!-- <h1>1 + - 1 = 1 Guiding System</h1> -->
+
+
+<section>
+<div class="container">
+<div class="row">
+  </br></br></br>
+  <div class="col-md-5">
+    <img src="./images/reminder/title.png" style = "width: 300px" alt="">
+  </div>
+</div>
+<div class="row">
+  </br></br></br></br></br>
+  <% for(var i = 0 ; i < thing.length; i++) {%>
+    <div class="col-md-2">
+        <%if (thing_already.indexOf(thing[i]) >= 0) { %>
+            <img src="./images/reminder/<%= thing[i] %>-found.png" style = "width: 150px" alt="">
+            <h3 id="<%= thing[i] %>-text" class="text-center" style="color:#545454"><%= thing[i] %></h3>
+        <% } else { %>
+            <img id="<%= thing[i] %>" src="./images/reminder/<%= thing[i] %>.png" style = "width: 150px" alt="" onclick="sendToServer('<%= thing[i] %>','reminder-res');change_color(this, '<%= thing[i] %>', 'reminder/');" >
+            <h3 id="<%= thing[i] %>-text" class="text-center" style="color:#2bab6e"><%= thing[i] %></h3>
+        <% } %>
+
+  </div>
+  <% } %>
+  <div class="col-md-2">
+    <img id="add" src="./images/reminder/add.png" style = "width: 150px" alt="" onclick="sendToServer('add-something', 'text')" onmouseover="hover(this,'reminder/');" onmouseout="unhover(this,'reminder/');">
+  </div>
+</div>
+<div class="row footer">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+      <p class="text-center" style="color:white">
+        <a href="/" class="change-page">●</a>
+        <a href="sign-in" class="change-page">●</a>
+        <a href="take-photo" class="change-page">●</a>
+        <a href="reminder" class="change-page page-choosen2">●</a>
+        <a href="users" class="change-page">●</a>
+        <img id="searching" src="./images/reminder/searching.png" style = "width:50px" alt="">
+      </p>
+  </div>
+  <!-- <div id="col-lg-2">
+  </div>
+  <div id="col-lg-2">
+    <img id="searching" src="./images/reminder/searching.png" style = "width:50px" alt="" onclick="javascript:location.href='find'" onmouseover="hover(this,'reminder/');" onmouseout="unhover(this,'reminder/');">
+  </div> -->
+</div>
+</div>
+</section>
+</div>
+        <script src="javascripts/jquery.js"></script>
+        <script src="javascripts/jquery.easing.min.js"></script>
+        <script src="javascripts/bootstrap.min.js"></script>
+        <script src="javascripts/main.js"></script>
+    </body>
+</html>
