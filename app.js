@@ -16,7 +16,7 @@ var client  = mqtt.connect('mqtt://iot.eclipse.org');
 
 client.on('connect', function () {
   client.subscribe('ike');
-  client.publish('oneplusone/a', 'kerker');
+  // client.publish('oneplusone/a', 'kerker');
 });
 
 // var thing-name = 'key';
@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
     res.render('index.ejs', {
         'name': '蘇彥大哥'
     });
-    client.publish('oneplusone/a', handsome);
+    // client.publish('oneplusone/a', handsome);
 });
 
 app.get('/sign-up', function(req, res) {
@@ -85,7 +85,7 @@ app.get('/find', function(req, res) {
       res.render('nice-day.ejs');
     } else if(thing_su.length === thing_already_su.length) {
       for (var i = 0 ; i < thing_su_new.length ; i ++) {
-        client.publish('oneplusone/a', thing_su_new[i]);
+        // client.publish('oneplusone/a', thing_su_new[i] + ';open');
         console.log('Send to edison: ' + thing_su_new[i]);
       }
       console.log(thing_su_new.length);
@@ -96,7 +96,7 @@ app.get('/find', function(req, res) {
     }
     else {
       for (var i = 0 ; i < thing_su_new.length ; i ++) {
-        client.publish('oneplusone/a', thing_su_new[i]);
+        client.publish('oneplusone/a', thing_su_new[i] + ';open');
         console.log('Send to edison: ' + thing_su_new[i]);
       }
       res.render('find-my.ejs', {
@@ -132,12 +132,15 @@ app.get('/main', function(req, res) {
 
 app.get('/text', function(req, res) {
     console.log('text: ' + req.query.name);
+    if (req.query.name === 'closeLight') {
+      client.publish('oneplusone/a', 'light;close');
+    }
     return res.send('done');
 });
 
 app.get('/off', function(req, res) {
     console.log('close: ' + req.query.name);
-    client.publish('oneplusone/a', req.query.name);
+    client.publish('oneplusone/a', req.query.name + ';close');
     res.end();
 });
 
