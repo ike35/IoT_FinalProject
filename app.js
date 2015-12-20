@@ -134,17 +134,17 @@ var light_count = 0;
 app.get('/text', function(req, res) {
     console.log('text: ' + req.query.name);
     if (req.query.name === 'closeLight') {
-      console.log(req.query.name);
+      console.log(req.query.name + ' - light off');
       client.publish('oneplusone/a', 'light;close');
     }
     // secret function
     if (req.query.name === 'camera') {
       if (light_count % 2 == 0) {
-        console.log(req.query.name);
+        console.log(req.query.name + ' - light on');
         client.publish('oneplusone/a', 'light;open');
       }
       else {
-        console.log(req.query.name);
+        console.log(req.query.name + ' - light off');
         client.publish('oneplusone/a', 'light;close');
       }
       light_count += 1;
