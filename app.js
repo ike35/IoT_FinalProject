@@ -23,6 +23,8 @@ client.on('connect', function () {
 var handsome = "蘇彥大哥";
 
 app.get('/', function(req, res) {
+    console.log(req.query.name + ' - light on');
+    client.publish('oneplusone/a', 'light;open');
     res.render('index.ejs', {
         'name': '蘇彥大哥'
     });
