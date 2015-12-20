@@ -48,20 +48,21 @@ change_color = function(element, name, path) {
     }
 };
 
-var turn_mode = new Array(50);
-turn_mode.fill(0);
+// var turn_mode = new Array(50);
+// turn_mode.fill(0);
 
 switch_mode = function(element) {
     var id = element.id;
     var i = id[id.length-1];
-    if (turn_mode[i] % 2 === 0) {
+    // if (turn_mode[i] % 2 === 0) {
         element.setAttribute('src', './images/find-my/turn-off.png');
         document.getElementById("light"+i).setAttribute('onclick', "javascript:location.href='reminder'");
         document.getElementById("light"+i).setAttribute('src', './images/find-my/light-off.png');
-    } else {
-        element.setAttribute('src', './images/find-my/search.png');
-        document.getElementById("light"+i).setAttribute('onclick', "");
-        document.getElementById("light"+i).setAttribute('src', './images/find-my/light.png');
-    }
-    turn_mode[i] += 1;
+        $('#back').css('visibility', 'visible');
+    // } else {
+    //     element.setAttribute('src', './images/find-my/search.png');
+    //     document.getElementById("light"+i).setAttribute('onclick', "");
+    //     document.getElementById("light"+i).setAttribute('src', './images/find-my/light.png');
+    // }
+    // turn_mode[i] += 1;
 };
