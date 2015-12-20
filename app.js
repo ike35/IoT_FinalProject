@@ -85,7 +85,7 @@ app.get('/find', function(req, res) {
       res.render('nice-day.ejs');
     } else if(thing_su.length === thing_already_su.length) {
       for (var i = 0 ; i < thing_su_new.length ; i ++) {
-        // client.publish('oneplusone/a', thing_su_new[i] + ';open');
+        client.publish('oneplusone/a', thing_su_new[i] + ';open');
         console.log('Send to edison: ' + thing_su_new[i]);
       }
       console.log(thing_su_new.length);
