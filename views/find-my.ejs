@@ -196,7 +196,7 @@
     </div>
     <div class="col-md-4">
       <%if (finish && i === thing_name.length-1) { %>
-            <img id="search<%= i %>" src="./images/find-my/search.png" style = "width: 400px" alt="" onclick="javascript:location.href='nice-day';sendToServer('<%= thing_name[i] %>', '/off');">
+            <img id="search<%= i %>" src="./images/find-my/search.png" style = "width: 400px" alt="" onclick="javascript:location.href='nice-day';sendToServer('<%= thing_name[i] %>', 'off');">
         <% } else { %>
             <img id="search<%= i %>" src="./images/find-my/search.png" style = "width: 400px" alt="" onclick="switch_mode(this);sendToServer('<%= thing_name[i] %>', 'off');">
         <% } %>
